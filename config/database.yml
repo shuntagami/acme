@@ -1,0 +1,7 @@
+development:
+  adapter: mysql2
+  encoding: utf8mb4
+  host: db
+  username: root
+  password: password
+  database: acme_development

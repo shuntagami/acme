@@ -5,7 +5,7 @@ WORKDIR /app
 
 RUN <<eot bash
   apt-get update
-  apt-get install -y build-essential default-libmysqlclient-dev
+  apt-get install -y build-essential default-libmysqlclient-dev libyaml-dev
   echo "Asia/Tokyo" > /etc/timezone
 eot
 
