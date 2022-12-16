@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/workspace
+      - app-bundle:/usr/local/bundle
+    environment:
+      DB_HOST: db
+      DB_USER: root
+      DB_PASSWORD: password
+      DB_NAME: sinatra_app_development
+    ports:
+      - 4567:4567
+    working_dir: /workspace
+volumes:
+  app-bundle:

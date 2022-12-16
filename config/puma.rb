@@ -6,7 +6,6 @@ threads min_threads_count, max_threads_count
 
 preload_app!
 
-port ENV.fetch('SERVER_PORT', 3000)
 environment ENV.fetch('RACK_ENV', 'development')
 pidfile ENV.fetch('PIDFILE', 'tmp/pids/server.pid')
 
