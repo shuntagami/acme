@@ -2,12 +2,12 @@ module Acme
   module Middleware
     def self.registered(app)
       app.use Rack::Session::Cookie,
-        :expire_after => (60 * 60 * 24 * 365),
-        :key => 'acme.session',
-        :path => '/',
-        :secret => ENV['SESSION_SECRET']
+              expire_after: (60 * 60 * 24 * 365),
+              key: 'acme.session',
+              path: '/',
+              secret: ENV['SESSION_SECRET']
 
-      app.use Rack::Protection::FrameOptions, :frame_options => :deny
+      app.use Rack::Protection::FrameOptions, frame_options: :deny
       app.use Rack::Deflater
     end
   end

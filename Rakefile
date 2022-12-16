@@ -18,7 +18,7 @@ task :server do
   system 'bundle exec puma --config config/puma.rb'
 end
 
-task :c => :console
-task :s => :server
+task c: :console
+task s: :server
 
-task :default => :server
+task default: :server
