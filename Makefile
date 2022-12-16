@@ -11,3 +11,12 @@ install:
 
 fix:
 	docker compose run --rm app bundle exec rubocop -A
+
+db.create:
+	docker compose run --rm app bundle exec rake db:create
+
+db.drop:
+	docker compose run --rm app bundle exec rake db:drop
+
+db.reset:
+	docker compose run --rm app bundle exec rake db:reset

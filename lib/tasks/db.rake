@@ -1,6 +1,7 @@
+require 'sinatra/activerecord/rake'
+
 namespace :db do
-  desc 'Migrate the database'
-  task :migrate do
-    system "sequel -m db/migrations #{ENV['DATABASE_URL']}"
+  task :load_config do
+    require_relative '../../config/boot'
   end
 end
