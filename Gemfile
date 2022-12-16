@@ -9,6 +9,7 @@ gem 'puma'
 gem 'rubocop'
 gem 'sinatra'
 gem 'sinatra-activerecord'
+gem 'sinatra-contrib'
 
 group :test do
   gem 'rack-test', require: 'rack/test'

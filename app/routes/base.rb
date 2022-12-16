@@ -8,6 +8,13 @@ module Acme
       enable :logging, :method_override, :static
       disable :dump_errors
 
+      configure :development do
+        register Sinatra::Reloader
+        after_reload do
+          puts 'reloaded'
+        end
+      end
+
       configure :test do
         set :show_exceptions, :after_handler
       end
