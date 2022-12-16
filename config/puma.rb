@@ -11,5 +11,5 @@ environment ENV.fetch('RACK_ENV', 'development')
 pidfile ENV.fetch('PIDFILE', 'tmp/pids/server.pid')
 
 on_worker_boot do
-  Sequel.connect(ENV['DATABASE_URL'])
+  # Sequel.connect(ENV['DATABASE_URL'])
 end
