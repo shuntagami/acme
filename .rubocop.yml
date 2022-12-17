@@ -1,3 +1,7 @@
+AllCops:
+  Exclude:
+    - "db/**/*"
+
 Documentation:
   Enabled: false
 
