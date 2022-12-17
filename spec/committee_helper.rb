@@ -15,6 +15,6 @@ module CommitteeHelper
   private
 
   def committee_schema_path
-    'docs/openapi.yaml'
+    "docs/openapi.yaml"
   end
 end

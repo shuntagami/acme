@@ -2,7 +2,7 @@ module Acme
   module Routes
     class Base < Sinatra::Base
       set :root, Dir.pwd
-      set :views, 'app/views'
+      set :views, "app/views"
       set :static_cache_control, [:public, { max_age: (60 * 60) }]
 
       enable :logging, :method_override, :static
@@ -11,7 +11,7 @@ module Acme
       configure :development do
         register Sinatra::Reloader
         after_reload do
-          puts 'reloaded'
+          puts "reloaded"
         end
       end
 

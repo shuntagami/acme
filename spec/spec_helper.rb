@@ -1,8 +1,8 @@
-ENV.store('RACK_ENV', 'test')
+ENV.store("RACK_ENV", "test")
 
-require 'config/boot'
-require 'committee_helper'
-require 'committee'
+require "config/boot"
+require "committee_helper"
+require "committee"
 
 RSpec.configure do |config|
   config.include Rack::Test::Methods

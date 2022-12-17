@@ -1,4 +1,4 @@
 $LOAD_PATH << Dir.pwd
 
-require 'config/boot'
+require "config/boot"
 run Acme::Application
