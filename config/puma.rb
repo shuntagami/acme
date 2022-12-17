@@ -11,5 +11,5 @@ pidfile ENV.fetch("PIDFILE", "tmp/pids/server.pid")
 
 on_worker_boot do
   ActiveRecord::Base.configurations = YAML.load_file("config/database.yml")
-  ActiveRecord::Base.establish_connection(:development)
+  ActiveRecord::Base.establish_connection
 end
