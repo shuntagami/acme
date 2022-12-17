@@ -2,6 +2,14 @@ AllCops:
   Exclude:
     - "db/**/*"
 
+Metrics/BlockLength:
+  Enabled: false
+
+Lint/AmbiguousBlockAssociation:
+  AllowedMethods:
+    - change
+    - not_change
+
 Documentation:
   Enabled: false
 

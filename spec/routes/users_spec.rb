@@ -30,7 +30,7 @@ describe Acme::Routes::UsersRoutes do
     context "when request is invalid" do
       let(:params) { { name: "longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglong" } }
 
-      fit "returns a status code of 400" do
+      it "returns a status code of 400" do
         expect { subject }.to_not change { user1.reload.name }
         assert_schema_conform(400)
       end

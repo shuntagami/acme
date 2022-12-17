@@ -19,7 +19,6 @@ module Acme
           end
 
           unless current_user.update(name: params[:name])
-            byebug
             h = { msg: current_user.errors.full_messages.join(",") }
 
             status 400
