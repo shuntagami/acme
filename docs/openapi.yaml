@@ -41,9 +41,36 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/ErrorUnauthorized"
+    put:
+      tags:
+        - user
+      summary: update user
+      responses:
+        "204":
+          description: OK
+        "400":
+          description: BadRequest
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorBadRequest"
+        "401":
+          description: UnAuthorized
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorUnauthorized"
 
 components:
   schemas:
+    ErrorBadRequest:
+      title: BadRequest
+      type: object
+      properties:
+        msg:
+          description: Reason for error
+          type: string
+          example: name must be less than 20
     ErrorUnauthorized:
       title: Authorization failed
       type: object
