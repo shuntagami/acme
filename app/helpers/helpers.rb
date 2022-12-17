@@ -1,8 +1,5 @@
 module Acme
   module Helpers
-    def template(name, *args)
-      directory = self.class.name.split("::").last.downcase
-      erb File.join(directory, name.to_s).to_sym, *args
-    end
+    def current_user = User.find_by(access_token: request.get_header("HTTP_ACCESS_TOKEN"))
   end
 end
