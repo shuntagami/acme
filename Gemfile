@@ -14,6 +14,10 @@ gem "sinatra"
 gem "sinatra-activerecord"
 gem "sinatra-contrib"
 
+group :develop do
+  gem "rack-console"
+end
+
 group :test do
   gem "rack-test", require: "rack/test"
   gem "rspec"

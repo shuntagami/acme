@@ -9,6 +9,9 @@ up:
 install:
 	docker compose run --rm app bundle install
 
+console:
+	docker compose run --rm app bundle exec rack-console
+
 fix:
 	docker compose run --rm app bundle exec rubocop -A
 
