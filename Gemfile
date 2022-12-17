@@ -2,6 +2,8 @@ source 'https://rubygems.org/'
 ruby '3.1.3'
 
 gem 'activerecord'
+gem 'byebug'
+gem 'committee'
 gem 'i18n'
 gem 'mysql2'
 gem 'psych'
