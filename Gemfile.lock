@@ -12,17 +12,24 @@ GEM
       minitest (>= 5.1)
       tzinfo (~> 2.0)
     ast (2.4.2)
+    byebug (11.1.3)
+    committee (4.4.0)
+      json_schema (~> 0.14, >= 0.14.3)
+      openapi_parser (>= 0.11.1, < 1.0)
+      rack (>= 1.5)
     concurrent-ruby (1.1.10)
     diff-lcs (1.5.0)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     json (2.6.3)
+    json_schema (0.21.0)
     minitest (5.16.3)
     multi_json (1.15.0)
     mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
     mysql2 (0.5.4)
     nio4r (2.5.8)
+    openapi_parser (0.15.0)
     parallel (1.22.1)
     parser (3.1.3.0)
       ast (~> 2.4.1)
@@ -92,6 +99,8 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord
+  byebug
+  committee
   i18n
   mysql2
   psych

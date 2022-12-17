@@ -2,7 +2,7 @@ describe Acme::Routes::Healthcheck do
   describe 'GET /_healthcheck' do
     it 'is ok' do
       get '/_healthcheck'
-      expect(last_response).to be_ok
+      assert_schema_conform(200)
     end
   end
 end
