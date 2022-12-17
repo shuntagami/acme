@@ -5,7 +5,7 @@ info:
 servers:
   - url: "http://localhost:4567"
 paths:
-  "/_healthcheck":
+  /_healthcheck:
     get:
       tags:
         - healthcheck
@@ -23,3 +23,43 @@ paths:
                     example: ok
                 required:
                   - msg
+  /users:
+    get:
+      tags:
+        - user
+      summary: show user
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+        "401":
+          description: UnAuthorized
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorUnauthorized"
+
+components:
+  schemas:
+    ErrorUnauthorized:
+      title: Authorization failed
+      type: object
+      properties:
+        msg:
+          description: Reason for error
+          type: string
+          example: unauthorized
+    User:
+      title: User
+      type: object
+      properties:
+        name:
+          description: name
+          type: string
+          example: shuntagami
+          maxLength: 20
+      required:
+        - name
