@@ -1,0 +1,27 @@
+name: API
+
+on:
+  pull_request:
+    branches: [master]
+
+jobs:
+  job_for_api:
+    name: test and lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build containers
+        env:
+          DOCKER_BUILDKIT: 1
+        run: |
+          make build
+      - name: Setup db
+        run: |
+          make db.create
+          make db.migrate
+      - name: Run lint
+        run: |
+          make lint
+      - name: Run test
+        run: |
+          make api_test
