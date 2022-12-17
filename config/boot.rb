@@ -11,6 +11,8 @@ end
 require "app/routes/base"
 Dir.glob("app/routes/*.rb").each { |file| require file }
 
+Dir.glob("app/models/*.rb").each { |file| require file }
+
 require "config/middleware"
 require "config/routes"
 

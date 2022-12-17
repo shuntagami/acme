@@ -32,3 +32,6 @@ db.drop:
 
 db.reset:
 	docker compose run --rm app bundle exec rake db:reset
+
+db.create_migration:
+	docker compose run --rm app bundle exec rake db:create_migration NAME=${name}

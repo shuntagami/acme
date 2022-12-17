@@ -4,9 +4,12 @@ module Acme
       set :root, Dir.pwd
       set :views, "app/views"
       set :static_cache_control, [:public, { max_age: (60 * 60) }]
+      set :default_content_type, :json
 
       enable :logging, :method_override, :static
       disable :dump_errors
+
+      register Sinatra::Namespace
 
       configure :development do
         register Sinatra::Reloader
