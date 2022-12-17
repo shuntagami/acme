@@ -11,7 +11,8 @@ services:
       DB_HOST: db
       DB_USER: root
       DB_PASSWORD: password
-      DB_NAME: sinatra_app_development
+      SERVER_MAX_THREADS_COUNT: 5
+      SERVER_WORKER_COUNT: 4
     ports:
       - 4567:4567
     depends_on:
