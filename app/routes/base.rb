@@ -9,6 +9,8 @@ module Acme
       enable :logging, :method_override, :static
       disable :dump_errors
 
+      register Sinatra::Namespace
+
       configure :development do
         register Sinatra::Reloader
         after_reload do
