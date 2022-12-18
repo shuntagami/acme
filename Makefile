@@ -10,7 +10,7 @@ install:
 	docker compose run --rm app bundle install
 
 console:
-	docker compose run --rm app bundle exec rack-console
+	docker compose run --rm app bundle exec rake console
 
 lint:
 	docker compose run --rm app bundle exec rubocop

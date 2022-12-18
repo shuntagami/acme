@@ -10,7 +10,6 @@ This is simple REST API server by [Sinatra](https://sinatrarb.com/) interact wit
 - [RSpec](https://relishapp.com/rspec/rspec-rails/docs)
 - [Committee](https://github.com/interagent/committee)
 - [i18n](https://github.com/ruby-i18n/i18n)
-- [rack-console](https://github.com/davidcelis/rack-console)
 
 ## Build Docker image
 

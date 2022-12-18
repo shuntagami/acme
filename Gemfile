@@ -16,7 +16,6 @@ group :development, :test do
 end
 
 group :develop do
-  gem "rack-console"
   gem "rubocop"
 end
 
