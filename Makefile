@@ -25,7 +25,8 @@ db.create:
 	docker compose run --rm app bundle exec rake db:create
 
 db.migrate:
-	docker compose run --rm app bundle exec rake db:migrate
+	docker compose run --rm app bundle exec rake db:migrate RACK_ENV="development" && \
+	docker compose run --rm app bundle exec rake db:migrate RACK_ENV="test"
 
 db.drop:
 	docker compose run --rm app bundle exec rake db:drop
