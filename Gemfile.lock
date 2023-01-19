@@ -33,7 +33,7 @@ GEM
     parallel (1.22.1)
     parser (3.2.0.0)
       ast (~> 2.4.1)
-    psych (5.0.1)
+    psych (5.0.2)
       stringio
     puma (6.0.2)
       nio4r (~> 2.0)
