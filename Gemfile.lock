@@ -33,7 +33,7 @@ GEM
     parallel (1.22.1)
     parser (3.2.0.0)
       ast (~> 2.4.1)
-    psych (5.0.2)
+    psych (5.1.0)
       stringio
     puma (6.0.2)
       nio4r (~> 2.0)
@@ -87,7 +87,7 @@ GEM
       rack-protection (= 3.0.5)
       sinatra (= 3.0.5)
       tilt (~> 2.0)
-    stringio (3.0.4)
+    stringio (3.0.5)
     tilt (2.0.11)
     tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
