@@ -7,22 +7,6 @@ permissions:
   contents: write
 
 jobs:
-  approve:
-    runs-on: ubuntu-latest
-    if: ${{ github.actor == 'dependabot[bot]' }}
-    steps:
-      - name: Dependabot metadata
-        id: metadata
-        uses: dependabot/fetch-metadata@v1
-        with:
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
-      - name: Approve a PR
-        if: ${{ steps.metadata.outputs.update-type != 'version-update:semver-major' }}
-        run: gh pr review --approve "$PR_URL"
-        env:
-          PR_URL: ${{github.event.pull_request.html_url}}
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-
   merge:
     runs-on: ubuntu-latest
     if: ${{ github.actor == 'dependabot[bot]' }}
@@ -31,4 +15,5 @@ jobs:
       - uses: ahmadnassri/action-dependabot-auto-merge@v2
         with:
           target: minor
+          command: squash and merge
           github-token: ${{secrets.WRITABLE_GITHUB_TOKEN}}
