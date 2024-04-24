@@ -1,6 +1,6 @@
 # syntax = docker/dockerfile:1.4
 
-FROM ruby:3.1.3-slim
+FROM ruby:3.3.1-slim
 WORKDIR /app
 
 RUN <<eot bash
